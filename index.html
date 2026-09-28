@@ -1,1 +1,44 @@
-<h1>Hello World Wide Web!</h1>
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>guide</title>
+  </head>
+  <body>
+    <div id="output">
+      <p id="para">
+      some text here
+      </p>
+      <button>
+        Blue
+      </button>
+      <button>
+        Orange
+      </button>
+    </div>
+    
+  <script>
+    function log(message){
+      // let myVariable1;
+      console.log(message);
+      document.getElementbyId("output").innerHTML =+ "<p>" +message+ "</p>"
+    }
+    
+    function changeColor(newColor){
+      const elem = document.getElementById("para")
+      elem.style.color = newColor;
+    }
+    document.querySelectorAll("button").foreach((button) => {
+      button.addEventListener("click", (event) => { changeColor(event.target.textContent.toLowerCase());
+     });
+    });
+    function log(message){
+      console.log(message);
+      
+      document.getElementById("output").innerHTML += "<p>" + message + "</p>";
+    }
+    log("Hello Ms B");
+    </script>  
+   
+  </body>
+</html>
